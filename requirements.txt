@@ -1,0 +1,5 @@
+chromadb==0.5.3
+llama_index==0.10.54
+openai==1.35.13
+SQLAlchemy==2.0.31
+Werkzeug==3.0.3
