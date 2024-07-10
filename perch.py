@@ -112,13 +112,14 @@ def talk_to_perch(user, index, vector_store, storage_context):
 def chatbot(user, chroma_collection, vector_store, storage_context):
     Settings.llm = OpenAI(model="gpt-3.5-turbo")
     index = None
+    print(f"\nHello {user}!")
     while True:
-        print(f"\nHello {user}! Welcome to your personalized chatbot. Enter your choice:")
+        print("\nWelcome to your personalized chatbot. Enter your choice:")
         print("1. Talk to Perch")
         print("2. Upload data")
         print("3. Update data")
         print("4. Delete data")
-        print("5. Exit")
+        print("5. Log out")
         
         choice = input("Enter your choice (1-5): ").strip()
         
@@ -131,7 +132,7 @@ def chatbot(user, chroma_collection, vector_store, storage_context):
         elif choice == '4':
             delete_data(chroma_collection)
         elif choice == '5':
-            print("Exiting program.")
+            print(f"Logging out. Bye {user}!")
             break
         else:
             print("Invalid choice. Please enter a number from 1 to 5.")
